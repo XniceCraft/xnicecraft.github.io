@@ -5,10 +5,15 @@
 	<title>Termux APT by X-Nice Craft</title>
 </head>
 <body>
-	<div id="bg-msg">
-		<p>Hi, there</p>
-		<p>Welcome to xnicecraft.github.io by X-Nice Craft</p>
-		<meta name="robots" content="noindex, nofollow">
+	<div class="msg">
+		<div id="bg-msg">
+			<p>Hi, there</p>
+			<p>This website created by X-Nice Craft</p>
+			<meta name="robots" content="noindex, nofollow">
+		</div>
+		<div id="apt-msg">
+			<p>Termux Repo : <a href="https://xnicecraft.github.io/termux-aarch64-21/">Github</a></p>
+		</div>
 	</div>
 </body>
 <style type="text/css">
@@ -17,12 +22,28 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		background-color: #abb7d9;
+	}
+	.msg{
+		flex-direction: column;
 	}
 	#bg-msg{
 		background-color: rgb(52, 171, 235);
 		text-align: center;
 		padding: 10px 10px 10px 10px;
 		border-radius: 20px;
+		line-height: 5px;
+	}
+	#apt-msg{
+		margin-top: 30px;
+		background-color: #2f40bd;
+		text-align: center;
+		padding: 10px 10px 10px 10px;
+		border-radius: 20px;
+	}
+	#apt-msg a{
+		text-decoration: none;
+		color:  #c2b6fa;
 	}
 	p{
 		font-family: 'Varela Round', sans-serif;

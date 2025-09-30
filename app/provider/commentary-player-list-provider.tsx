@@ -135,6 +135,7 @@ export function CommentaryPlayerListProvider({
 
     // Apply filters
     if (columnFilters.length > 0) {
+      setPagination((prev) => ({ ...prev, pageIndex: 0 }));
       result = result.filter((player) => {
         for (const filter of columnFilters) {
           const { id, value } = filter;
@@ -168,7 +169,7 @@ export function CommentaryPlayerListProvider({
     }
 
     return result;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded, dataVersion, columnFilters, sorting]);
 
   const paginatedPlayers = useMemo(() => {

@@ -69,7 +69,10 @@ export default function UploadPage() {
       </div>
 
       <Form {...form}>
-        <form onSubmit={() => form.handleSubmit(onSubmit)} className="w-full">
+        <form
+          onSubmit={(e) => void form.handleSubmit(onSubmit)(e)}
+          className="w-full"
+        >
           <FormField
             control={form.control}
             name="files"
